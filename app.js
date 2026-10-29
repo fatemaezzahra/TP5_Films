@@ -1,7 +1,23 @@
-const films = [
-    { titre: "Interstellar", genre: "Science-fiction", annee: 2014 },
-    { titre: "Inception", genre: "Science-fiction", annee: 2010 },
-    { titre: "Titanic", genre: "Romance", annee: 1997 },
-    { titre: "The Lion King", genre: "Animation", annee: 1994 },
-    { titre: "Gladiator", genre: "Action", annee: 2000 }
-];
+document.addEventListener("DOMContentLoaded", function () {
+    const themeButton = document.getElementById("theme-toggle");
+    const savedTheme = localStorage.getItem("theme");
+
+    // Restaurer le thème choisi
+    if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+        themeButton.textContent = "🌙 Mode sombre";
+    }
+
+    // Changer de thème au clic
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("light-theme");
+
+        if (document.body.classList.contains("light-theme")) {
+            localStorage.setItem("theme", "light");
+            themeButton.textContent = "🌙 Mode sombre";
+        } else {
+            localStorage.setItem("theme", "dark");
+            themeButton.textContent = "☀️ Mode clair";
+        }
+    });
+});
