@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineWorld - Films</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CineWorld</h1>
+        <p>Découvrez vos films préférés</p>
+    </header>
+
+    <button id="theme-toggle" type="button">
+        ☀️ Mode clair
+    </button>
+
+    <main>
+        <section class="controls">
+            <input
+                type="text"
+                id="search"
+                placeholder="Rechercher un film..."
+            >
+
+            <select id="genre">
+                <option value="all">Tous les genres</option>
+                <option value="Action">Action</option>
+                <option value="Science-fiction">Science-fiction</option>
+                <option value="Romance">Romance</option>
+                <option value="Animation">Animation</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Nos films</h2>
+            <div id="films-container" class="films-container">
+                <!-- Les films seront affichés ici -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CineWorld - Site de films</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
