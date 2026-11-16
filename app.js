@@ -9,3 +9,11 @@ function updateCounter(list) {
   const counter = document.getElementById("counter");
   counter.textContent = list.length + " film(s) affiché(s)";
 }
+
+
+const genreSelect = document.getElementById("genre-filter");
+
+genreSelect.addEventListener("change", function () {
+  currentFilters.genre = genreSelect.value;
+  applyFilters();
+});
